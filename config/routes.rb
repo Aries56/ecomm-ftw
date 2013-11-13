@@ -1,10 +1,11 @@
 ECommFtw::Application.routes.draw do
   
+  resources :products, :except => :show
+  resources :categories
+
+
   root :to => "store#index", :via => :get
   match 'products/:id' => "store#show", :as => 'product'
-  
-  resources :products, :except => :show
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

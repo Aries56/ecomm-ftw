@@ -4,4 +4,7 @@
   <p>
     <strong>Price:</string> <%= number_to_currency product.price %>
   </p>
+  <% if product.category %>
+    <p>Category: <%= product.category.name %>
+  <% end %>
 </section>
